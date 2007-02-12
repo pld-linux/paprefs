@@ -1,5 +1,5 @@
 Summary:	PulseAudio Preferences - configuration dialog for PulseAudio sound server
-Summary(pl):	PulseAudio Preferences - konfigurator serwera d¼wiêku PulseAudio
+Summary(pl.UTF-8):   PulseAudio Preferences - konfigurator serwera dÅºwiÄ™ku PulseAudio
 Name:		paprefs
 Version:	0.9.5
 Release:	1
@@ -20,9 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PulseAudio Preferences (paprefs) is a simple GTK+ based configuration
 dialog for the PulseAudio sound server.
 
-%description -l pl
+%description -l pl.UTF-8
 PulseAudio Preferences (paprefs) to proste, oparte na GTK+ okno
-dialogowe do konfiguracji serwera d¼wiêku PulseAudio.
+dialogowe do konfiguracji serwera dÅºwiÄ™ku PulseAudio.
 
 %prep
 %setup -q
