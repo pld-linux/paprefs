@@ -1,5 +1,5 @@
 Summary:	PulseAudio Preferences - configuration dialog for PulseAudio sound server
-Summary(pl.UTF-8):   PulseAudio Preferences - konfigurator serwera dźwięku PulseAudio
+Summary(pl.UTF-8):	PulseAudio Preferences - konfigurator serwera dźwięku PulseAudio
 Name:		paprefs
 Version:	0.9.5
 Release:	1
