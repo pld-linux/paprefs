@@ -9,6 +9,7 @@ Source0:	http://0pointer.de/lennart/projects/paprefs/%{name}-%{version}.tar.gz
 # Source0-md5:	de5474d17aad63b40855a8815018cdf8
 URL:		http://0pointer.de/lennart/projects/paprefs/
 BuildRequires:	gconfmm-devel >= 2.6
+BuildRequires:	gettext-devel
 BuildRequires:	gtkmm-devel >= 2.4
 BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
@@ -37,12 +38,14 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README
+%doc ChangeLog README
 %attr(755,root,root) %{_bindir}/paprefs
 %{_datadir}/paprefs
 %{_desktopdir}/paprefs.desktop
