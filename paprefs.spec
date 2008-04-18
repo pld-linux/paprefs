@@ -14,6 +14,7 @@ BuildRequires:	gtkmm-devel >= 2.4
 BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	pkgconfig
+Requires:	pulseaudio-gconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
