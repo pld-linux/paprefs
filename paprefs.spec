@@ -11,9 +11,11 @@ URL:		http://0pointer.de/lennart/projects/paprefs/
 BuildRequires:	gconfmm-devel >= 2.6
 BuildRequires:	gettext-devel
 BuildRequires:	gtkmm-devel >= 2.4
+BuildRequires:	intltool
 BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	pkgconfig
+BuildRequires:	pulseaudio-devel
 Requires:	pulseaudio-gconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
