@@ -2,7 +2,7 @@ Summary:	PulseAudio Preferences - configuration dialog for PulseAudio sound serv
 Summary(pl.UTF-8):	PulseAudio Preferences - konfigurator serwera dźwięku PulseAudio
 Name:		paprefs
 Version:	0.9.9
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://0pointer.de/lennart/projects/paprefs/%{name}-%{version}.tar.gz
@@ -16,6 +16,7 @@ BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	pulseaudio-devel
+%requires_eq	pulseaudio
 Requires:	pulseaudio-gconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
