@@ -10,7 +10,7 @@ Source0:	http://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.t
 URL:		http://freedesktop.org/software/pulseaudio/paprefs/
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gconfmm-devel >= 2.6
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtkmm-devel >= 2.4
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libglademm-devel >= 2.4
