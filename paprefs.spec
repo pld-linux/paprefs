@@ -2,7 +2,7 @@ Summary:	PulseAudio Preferences - configuration dialog for PulseAudio sound serv
 Summary(pl.UTF-8):	PulseAudio Preferences - konfigurator serwera dźwięku PulseAudio
 Name:		paprefs
 Version:	0.9.10
-Release:	9
+Release:	10
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.tar.xz
