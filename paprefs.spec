@@ -7,7 +7,12 @@ License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.tar.xz
 # Source0-md5:	e9130fb1ab5211a50b16f6b63bb6fd49
+Patch0:		module-path.patch
+Patch1:		dynamic-module-dir.patch
+Patch2:		doc-drop-0pointer.de-references.patch
 URL:		http://freedesktop.org/software/pulseaudio/paprefs/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gconfmm-devel >= 2.6
 BuildRequires:	gettext-tools
@@ -33,8 +38,15 @@ dialogowe do konfiguracji serwera dźwięku PulseAudio.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--disable-lynx
 %{__make}
