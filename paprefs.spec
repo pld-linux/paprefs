@@ -47,6 +47,7 @@ dialogowe do konfiguracji serwera dźwięku PulseAudio.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+export CXXFLAGS="%{rpmcxxflags} -std=c++11"
 %configure \
 	--disable-lynx
 %{__make}
