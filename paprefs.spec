@@ -5,14 +5,13 @@ Version:	1.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
-Source0:	http://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.tar.xz
+Source0:	https://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.tar.xz
 # Source0-md5:	18514a18ad71048dfb4a61a20a48f510
-URL:		http://freedesktop.org/software/pulseaudio/paprefs/
+URL:		https://freedesktop.org/software/pulseaudio/paprefs/
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-tools
 BuildRequires:	glibmm-devel >= 2.26
-BuildRequires:	gtkmm3-devel
-BuildRequires:	intltool >= 0.35.0
+BuildRequires:	gtkmm3-devel >= 3.0
 BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	meson >= 0.40.1
@@ -40,6 +39,7 @@ dialogowe do konfiguracji serwera dźwięku PulseAudio.
 
 %build
 %meson build
+
 %meson_build -C build
 
 %install
