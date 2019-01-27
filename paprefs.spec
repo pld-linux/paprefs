@@ -1,24 +1,22 @@
 Summary:	PulseAudio Preferences - configuration dialog for PulseAudio sound server
 Summary(pl.UTF-8):	PulseAudio Preferences - konfigurator serwera dźwięku PulseAudio
 Name:		paprefs
-Version:	1.0
+Version:	1.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	https://freedesktop.org/software/pulseaudio/paprefs/%{name}-%{version}.tar.xz
-# Source0-md5:	18514a18ad71048dfb4a61a20a48f510
+# Source0-md5:	d9eb313e945fc7cf26ca1b75fa812bc2
 URL:		https://freedesktop.org/software/pulseaudio/paprefs/
-BuildRequires:	dbus-glib-devel
 BuildRequires:	gettext-tools
 BuildRequires:	glibmm-devel >= 2.26
 BuildRequires:	gtkmm3-devel >= 3.0
-BuildRequires:	libglademm-devel >= 2.4
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	meson >= 0.40.1
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	pulseaudio-devel >= 1.1
-BuildRequires:	rpmbuild(macros) >= 1.72
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	glibmm >= 2.26
@@ -40,12 +38,12 @@ dialogowe do konfiguracji serwera dźwięku PulseAudio.
 %build
 %meson build
 
-%meson_build -C build
+%ninja_build -C build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%meson_install -C build
+%ninja_install -C build
 
 %find_lang %{name}
 
